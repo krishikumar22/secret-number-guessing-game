@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+
+{
+    int secretnumber=4;
+    int guessnumber;
+    int guesslimit=4;
+    int outofguesses=0;
+    int guesscount=0;
+
+    while(guessnumber!=secretnumber && outofguesses==0){
+            if(guesscount<guesslimit){
+    printf("enter a number");
+    scanf("%d\n",&guessnumber);
+    guesscount++;
+            }
+            else{
+                outofguesses=1;
+            }
+    }
+    if(outofguesses==1){
+    printf("out of guesses");
+    }
+    else{
+        printf("HEY YOU WIN!");
+    }
+
+    return 0;
+}
